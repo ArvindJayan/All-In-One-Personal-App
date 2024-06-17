@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(), // Initial entry point is SplashScreen
+      home: const SplashScreen(),
     );
   }
 }
@@ -79,75 +79,87 @@ class MainMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('All In One Personal App'),
+        backgroundColor: Colors.grey.shade900,
+        title: const Text(
+          'All In One Personal App',
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       backgroundColor: Colors.grey.shade100,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(
-              width: 200,
-              height: 50,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ExpenseManager()),
-                  );
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  textStyle: const TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
+            const Spacer(),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ExpenseManager()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
                 ),
-                child: const Text('Expense Manager'),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                backgroundColor: Colors.white,
+                foregroundColor: Colors.black,
               ),
+              icon: const Text(
+                '₹',
+                style: TextStyle(fontSize: 24),
+              ),
+              label: const Text('Expense Manager'),
             ),
             const SizedBox(height: 20),
-            SizedBox(
-              width: 200,
-              height: 50,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => FitnessTracker()),
-                  );
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  textStyle: const TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FitnessTracker()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
                 ),
-                child: const Text('Fitness Tracker'),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                backgroundColor: Colors.white,
+                foregroundColor: Colors.black,
               ),
+              icon: const Icon(
+                Icons.directions_run,
+                size: 28,
+              ),
+              label: const Text('Fitness Tracker'),
             ),
             const SizedBox(height: 20),
-            SizedBox(
-              width: 200,
-              height: 50,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => NotesApp()),
-                  );
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  textStyle: const TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NotesApp()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
                 ),
-                child: const Text('Notes App'),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                backgroundColor: Colors.white,
+                foregroundColor: Colors.black,
               ),
+              icon: const Icon(
+                Icons.notes,
+                size: 28,
+              ),
+              label: const Text('Notes App'),
             ),
+            const Spacer(),
           ],
         ),
       ),
