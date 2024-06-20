@@ -2,6 +2,7 @@ import 'package:expensemanager/bar%20graph/individual_bar.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
+// Widget for displaying a bar graph
 class MyBarGraph extends StatefulWidget {
   final List<double> monthlySummary;
   final int startMonth;
@@ -19,12 +20,13 @@ class MyBarGraph extends StatefulWidget {
 class _MyBarGraphState extends State<MyBarGraph> {
   List<IndividualBar> barData = [];
 
+  @override
   void initState() {
     super.initState();
-
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) => scrollToEnd());
   }
 
+  // Initialize bar data based on monthly summary
   void initializeBarData() {
     barData = List.generate(
       widget.monthlySummary.length,
@@ -32,6 +34,7 @@ class _MyBarGraphState extends State<MyBarGraph> {
     );
   }
 
+  // Calculate the maximum value for the Y-axis of the bar chart
   double calculateMax() {
     double max = 10000;
     widget.monthlySummary.sort();
@@ -45,6 +48,8 @@ class _MyBarGraphState extends State<MyBarGraph> {
   }
 
   final ScrollController _scrollController = ScrollController();
+
+  // Scroll to the end of the bar graph
   void scrollToEnd() {
     _scrollController.animateTo(
       _scrollController.position.maxScrollExtent,
@@ -120,6 +125,7 @@ class _MyBarGraphState extends State<MyBarGraph> {
   }
 }
 
+// Widget for displaying the month labels on the X-axis of the bar chart
 Widget getBottomTitles(double value, TitleMeta meta) {
   const textstyle = TextStyle(
     color: Colors.grey,
@@ -169,9 +175,10 @@ Widget getBottomTitles(double value, TitleMeta meta) {
       break;
   }
   return SideTitleWidget(
-      axisSide: meta.axisSide,
-      child: Text(
-        text,
-        style: textstyle,
-      ));
+    axisSide: meta.axisSide,
+    child: Text(
+      text,
+      style: textstyle,
+    ),
+  );
 }

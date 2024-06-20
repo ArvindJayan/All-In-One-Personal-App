@@ -6,6 +6,7 @@ import 'package:expensemanager/models/expense.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+// Home page widget displaying expense data and actions
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -29,6 +30,7 @@ class _HomePageState extends State<HomePage> {
     super.initState();
   }
 
+  // Refreshes data displayed on the page
   void refreshData() {
     _monthlyTotalsFuture = Provider.of<ExpenseDatabase>(context, listen: false)
         .calculateMonthlyTotals();
@@ -37,6 +39,7 @@ class _HomePageState extends State<HomePage> {
             .calculateCurrentMonthTotal();
   }
 
+  // Opens a dialog to add a new expense
   void openNewExpenseBox() {
     showDialog(
       context: context,
@@ -60,6 +63,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  // Opens a dialog to edit an existing expense
   void openEditBox(Expense expense) {
     String existingName = expense.name;
     String existingAmount = expense.amount.toString();
@@ -89,6 +93,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  // Opens a dialog to confirm deletion of an expense
   void openDeleteBox(Expense expense) {
     showDialog(
       context: context,
@@ -208,6 +213,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  // Widget for cancel button in dialogs
   Widget _cancelButton() {
     return MaterialButton(
       onPressed: () {
@@ -219,6 +225,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  // Widget for save button in new expense dialog
   Widget _createNewExpenseButton() {
     return MaterialButton(
       onPressed: () async {
@@ -244,6 +251,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  // Widget for save button in edit expense dialog
   Widget _editExpenseButton(Expense expense) {
     return MaterialButton(
       onPressed: () async {
@@ -273,6 +281,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  // Widget for delete button in delete expense dialog
   Widget _deleteExpenseButton(int id) {
     return MaterialButton(
       onPressed: () async {

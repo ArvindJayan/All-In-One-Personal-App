@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'pages/home_page.dart';
 
+// Expense Manager splash screen widget
 class ExpenseManager extends StatefulWidget {
   const ExpenseManager({Key? key}) : super(key: key);
 
@@ -28,6 +29,7 @@ class _ExpenseManagerState extends State<ExpenseManager>
       curve: Curves.easeOut,
     );
 
+    // Navigate to HomePage after animation completes
     _controller.forward().whenComplete(() {
       Future.delayed(const Duration(seconds: 1), () {
         Navigator.pushReplacement(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
+// Custom list tile widget with sliding actions
 class MyListTile extends StatelessWidget {
   final String title;
   final String trailing;

@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
+// Notes App splash screen widget
 class NotesApp extends StatefulWidget {
   @override
   _NotesAppState createState() => _NotesAppState();
