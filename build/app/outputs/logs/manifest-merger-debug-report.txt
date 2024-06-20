@@ -21,6 +21,8 @@ INJECTED from C:\Users\jayan\OneDrive\Documents\Projects\AndroidAppDevelopment\A
 MERGED from C:\Users\jayan\OneDrive\Documents\Projects\AndroidAppDevelopment\All-In-One-Personal-App\android\app\src\main\AndroidManifest.xml:1:1-45:12
 MERGED from [:isar_flutter_libs] C:\Users\jayan\OneDrive\Documents\Projects\AndroidAppDevelopment\All-In-One-Personal-App\build\isar_flutter_libs\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-10:12
 MERGED from [:path_provider_android] C:\Users\jayan\OneDrive\Documents\Projects\AndroidAppDevelopment\All-In-One-Personal-App\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:shared_preferences_android] C:\Users\jayan\OneDrive\Documents\Projects\AndroidAppDevelopment\All-In-One-Personal-App\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:sqflite] C:\Users\jayan\OneDrive\Documents\Projects\AndroidAppDevelopment\All-In-One-Personal-App\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\jayan\.gradle\caches\transforms-3\2a215381204751055df81b6269e717b7\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\jayan\.gradle\caches\transforms-3\f302e75fb7efd781bcf1a29281c188da\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\jayan\.gradle\caches\transforms-3\69635902d600ff315c2d2b7f75af662f\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
@@ -76,6 +78,10 @@ MERGED from [:isar_flutter_libs] C:\Users\jayan\OneDrive\Documents\Projects\Andr
 MERGED from [:isar_flutter_libs] C:\Users\jayan\OneDrive\Documents\Projects\AndroidAppDevelopment\All-In-One-Personal-App\build\isar_flutter_libs\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
 MERGED from [:path_provider_android] C:\Users\jayan\OneDrive\Documents\Projects\AndroidAppDevelopment\All-In-One-Personal-App\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:path_provider_android] C:\Users\jayan\OneDrive\Documents\Projects\AndroidAppDevelopment\All-In-One-Personal-App\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] C:\Users\jayan\OneDrive\Documents\Projects\AndroidAppDevelopment\All-In-One-Personal-App\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] C:\Users\jayan\OneDrive\Documents\Projects\AndroidAppDevelopment\All-In-One-Personal-App\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] C:\Users\jayan\OneDrive\Documents\Projects\AndroidAppDevelopment\All-In-One-Personal-App\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] C:\Users\jayan\OneDrive\Documents\Projects\AndroidAppDevelopment\All-In-One-Personal-App\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\jayan\.gradle\caches\transforms-3\2a215381204751055df81b6269e717b7\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\jayan\.gradle\caches\transforms-3\2a215381204751055df81b6269e717b7\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\jayan\.gradle\caches\transforms-3\f302e75fb7efd781bcf1a29281c188da\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41

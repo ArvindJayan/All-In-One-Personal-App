@@ -1,7 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
-import 'pages/home_page.dart';
+import 'pages/expense_homepage.dart';
 
 // Expense Manager splash screen widget
 class ExpenseManager extends StatefulWidget {

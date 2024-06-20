@@ -206,6 +206,12 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///C:/src/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
       "name": "frontend_server_client",
       "rootUri": "file:///C:/Users/jayan/AppData/Local/Pub/Cache/hosted/pub.dev/frontend_server_client-4.0.0",
       "packageUri": "lib/",
@@ -422,6 +428,48 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "shared_preferences",
+      "rootUri": "file:///C:/Users/jayan/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences-2.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "shared_preferences_android",
+      "rootUri": "file:///C:/Users/jayan/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_android-2.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "shared_preferences_foundation",
+      "rootUri": "file:///C:/Users/jayan/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_foundation-2.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "shared_preferences_linux",
+      "rootUri": "file:///C:/Users/jayan/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_linux-2.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "shared_preferences_platform_interface",
+      "rootUri": "file:///C:/Users/jayan/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_platform_interface-2.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "shared_preferences_web",
+      "rootUri": "file:///C:/Users/jayan/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_web-2.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "shared_preferences_windows",
+      "rootUri": "file:///C:/Users/jayan/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_windows-2.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "shelf",
       "rootUri": "file:///C:/Users/jayan/AppData/Local/Pub/Cache/hosted/pub.dev/shelf-1.4.1",
       "packageUri": "lib/",
@@ -452,6 +500,18 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "sqflite",
+      "rootUri": "file:///C:/Users/jayan/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite-2.3.3+1",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "sqflite_common",
+      "rootUri": "file:///C:/Users/jayan/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite_common-2.5.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
       "name": "stack_trace",
       "rootUri": "file:///C:/Users/jayan/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.1",
       "packageUri": "lib/",
@@ -474,6 +534,12 @@
       "rootUri": "file:///C:/Users/jayan/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
+    },
+    {
+      "name": "synchronized",
+      "rootUri": "file:///C:/Users/jayan/AppData/Local/Pub/Cache/hosted/pub.dev/synchronized-3.1.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "term_glyph",
@@ -572,7 +638,7 @@
       "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-06-17T16:20:56.873345Z",
+  "generated": "2024-06-20T16:31:51.974704Z",
   "generator": "pub",
   "generatorVersion": "3.4.3",
   "flutterRoot": "file:///C:/src/flutter",
