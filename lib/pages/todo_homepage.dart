@@ -95,22 +95,26 @@ class _TodoHomepageState extends State<TodoHomepage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Todo List',
+          'To-Do List',
           style: TextStyle(
             fontSize: 24,
-            fontWeight: FontWeight.normal, // Reduced boldness
+            fontWeight: FontWeight.w500,
             color: Colors.white,
           ),
         ),
         backgroundColor: Colors.grey.shade900,
         centerTitle: true,
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _buildTaskList(incompleteTasks, false),
-          _buildTaskList(completedTasks, true),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(
+            16.0, 16.0, 16.0, 0.0), // Adjusted top padding
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _buildTaskList(incompleteTasks, false),
+            _buildTaskList(completedTasks, true),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -128,16 +132,15 @@ class _TodoHomepageState extends State<TodoHomepage> {
         : Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              if (isCompleted) // Only show title for completed tasks
+              if (isCompleted)
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(top: 16.0, bottom: 8.0),
                   child: Text(
                     'Completed Tasks',
                     style: TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.normal, // Reduced boldness
-                      color:
-                          Colors.black, // Black title color for completed tasks
+                      fontWeight: FontWeight.normal,
+                      color: Colors.black,
                     ),
                   ),
                 ),
@@ -154,29 +157,37 @@ class _TodoHomepageState extends State<TodoHomepage> {
   }
 
   Widget _buildTaskTile(TodoItem task) {
-    return ListTile(
-      title: Text(
-        task.name,
-        style: TextStyle(
-          decoration: task.completed ? TextDecoration.lineThrough : null,
-        ),
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.grey.shade200,
+        borderRadius: BorderRadius.circular(8.0),
       ),
-      leading: Checkbox(
-        value: task.completed,
-        onChanged: (isChecked) {
-          _toggleTaskCompletion(todoItems.indexOf(task), task.completed);
-        },
-        fillColor: MaterialStateProperty.resolveWith<Color?>(
-          (Set<MaterialState> states) {
-            // Change checkbox color based on completion status
-            if (task.completed) {
-              return Colors.grey.shade900;
-            } else {
-              return Colors.white;
-            }
-          },
+      margin: const EdgeInsets.symmetric(vertical: 4.0),
+      padding: const EdgeInsets.all(10.0), // Adjusted padding for smaller size
+      child: ListTile(
+        title: Text(
+          task.name,
+          style: TextStyle(
+            decoration: task.completed ? TextDecoration.lineThrough : null,
+          ),
         ),
-        checkColor: Colors.white,
+        leading: Checkbox(
+          value: task.completed,
+          onChanged: (isChecked) {
+            _toggleTaskCompletion(todoItems.indexOf(task), task.completed);
+          },
+          fillColor: MaterialStateProperty.resolveWith<Color?>(
+            (Set<MaterialState> states) {
+              // Change checkbox color based on completion status
+              if (task.completed) {
+                return Colors.grey.shade900;
+              } else {
+                return Colors.white;
+              }
+            },
+          ),
+          checkColor: Colors.white,
+        ),
       ),
     );
   }

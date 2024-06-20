@@ -1,4 +1,4 @@
-import 'package:expensemanager/bar%20graph/individual_bar.dart';
+import 'package:expensemanager/models/individual_bar.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
