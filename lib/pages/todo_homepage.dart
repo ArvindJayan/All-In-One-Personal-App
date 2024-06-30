@@ -1,6 +1,7 @@
 import 'package:expensemanager/database/todo_database.dart';
 import 'package:flutter/material.dart';
 
+/// Home page for managing to-do items.
 class TodoHomepage extends StatefulWidget {
   const TodoHomepage({Key? key}) : super(key: key);
 
@@ -12,6 +13,7 @@ class _TodoHomepageState extends State<TodoHomepage> {
   late List<TodoItem> todoItems;
   late TodoDatabase database;
 
+  /// Initializes state and loads tasks.
   @override
   void initState() {
     super.initState();
@@ -20,6 +22,7 @@ class _TodoHomepageState extends State<TodoHomepage> {
     _loadTasks();
   }
 
+  /// Loads tasks from the database.
   void _loadTasks() async {
     List<TodoItem> tasks = await database.getTasks();
     setState(() {
@@ -27,6 +30,7 @@ class _TodoHomepageState extends State<TodoHomepage> {
     });
   }
 
+  /// Opens a dialog to add a new task.
   void _addNewTask(BuildContext context) async {
     TextEditingController controller = TextEditingController();
     showDialog(
@@ -43,10 +47,8 @@ class _TodoHomepageState extends State<TodoHomepage> {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: const Text(
-                'Cancel',
-                style: TextStyle(color: Colors.black),
-              ),
+              child:
+                  const Text('Cancel', style: TextStyle(color: Colors.black)),
             ),
             ElevatedButton(
               onPressed: () async {
@@ -78,9 +80,9 @@ class _TodoHomepageState extends State<TodoHomepage> {
     );
   }
 
+  /// Toggles task completion status.
   void _toggleTaskCompletion(int index, bool completed) async {
-    TodoItem updatedTask = todoItems[index]
-        .copyWith(completed: !completed); // Toggle completion status
+    TodoItem updatedTask = todoItems[index].copyWith(completed: !completed);
     await database.updateTask(updatedTask);
     _loadTasks();
   }
@@ -97,17 +99,13 @@ class _TodoHomepageState extends State<TodoHomepage> {
         title: const Text(
           'To-Do List',
           style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.w500,
-            color: Colors.white,
-          ),
+              fontSize: 24, fontWeight: FontWeight.w500, color: Colors.white),
         ),
         backgroundColor: Colors.grey.shade900,
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(
-            16.0, 16.0, 16.0, 0.0), // Adjusted top padding
+        padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -126,6 +124,7 @@ class _TodoHomepageState extends State<TodoHomepage> {
     );
   }
 
+  /// Builds the task list for either completed or incomplete tasks.
   Widget _buildTaskList(List<TodoItem> tasks, bool isCompleted) {
     return tasks.isEmpty
         ? SizedBox.shrink()
@@ -138,10 +137,9 @@ class _TodoHomepageState extends State<TodoHomepage> {
                   child: Text(
                     'Completed Tasks',
                     style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.normal,
-                      color: Colors.black,
-                    ),
+                        fontSize: 18,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.black),
                   ),
                 ),
               ListView.builder(
@@ -156,6 +154,7 @@ class _TodoHomepageState extends State<TodoHomepage> {
           );
   }
 
+  /// Builds a tile for a single task item.
   Widget _buildTaskTile(TodoItem task) {
     return Container(
       decoration: BoxDecoration(
@@ -163,7 +162,7 @@ class _TodoHomepageState extends State<TodoHomepage> {
         borderRadius: BorderRadius.circular(8.0),
       ),
       margin: const EdgeInsets.symmetric(vertical: 4.0),
-      padding: const EdgeInsets.all(10.0), // Adjusted padding for smaller size
+      padding: const EdgeInsets.all(10.0),
       child: ListTile(
         title: Text(
           task.name,
@@ -178,7 +177,6 @@ class _TodoHomepageState extends State<TodoHomepage> {
           },
           fillColor: MaterialStateProperty.resolveWith<Color?>(
             (Set<MaterialState> states) {
-              // Change checkbox color based on completion status
               if (task.completed) {
                 return Colors.grey.shade900;
               } else {

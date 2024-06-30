@@ -2,10 +2,12 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:expensemanager/pages/todo_homepage.dart';
 import 'package:flutter/material.dart';
 
+/// Entry point
 void main() {
   runApp(const TodoList());
 }
 
+/// Root of the application.
 class TodoList extends StatelessWidget {
   const TodoList({Key? key}) : super(key: key);
 
@@ -22,6 +24,7 @@ class TodoList extends StatelessWidget {
   }
 }
 
+/// Main menu screen
 class MainMenu extends StatefulWidget {
   const MainMenu({Key? key}) : super(key: key);
 
@@ -33,6 +36,7 @@ class _MainMenuState extends State<MainMenu>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
+  /// Initializes animation controller and starts the animation sequence.
   @override
   void initState() {
     super.initState();
@@ -57,6 +61,7 @@ class _MainMenuState extends State<MainMenu>
     super.dispose();
   }
 
+  /// Builds main menu screen with an animated text widget.
   @override
   Widget build(BuildContext context) {
     return Scaffold(

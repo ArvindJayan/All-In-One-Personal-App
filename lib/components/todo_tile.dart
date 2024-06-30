@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
+/// Widget displaying a to-do item with a checkbox.
 class TodoTile extends StatelessWidget {
+  /// The name of the task.
   final String taskName;
+
+  /// Whether the task is completed.
   final bool taskCompleted;
+
+  /// Callback for checkbox state changes.
   final ValueChanged<bool?> onChanged;
 
   const TodoTile({
@@ -15,6 +21,7 @@ class TodoTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      /// Displays task name with a line-through if completed.
       title: Text(
         taskName,
         style: TextStyle(
@@ -24,16 +31,14 @@ class TodoTile extends StatelessWidget {
       leading: Checkbox(
         value: taskCompleted,
         onChanged: onChanged,
+
+        /// Checkbox color based on completion status.
         fillColor: MaterialStateProperty.resolveWith<Color?>(
           (Set<MaterialState> states) {
-            // Change checkbox color based on completion status
-            if (taskCompleted) {
-              return Colors.grey.shade900;
-            } else {
-              return Colors.white;
-            }
+            return taskCompleted ? Colors.grey.shade900 : Colors.white;
           },
         ),
+
         checkColor: Colors.white,
       ),
     );

@@ -3,6 +3,7 @@ import 'package:expensemanager/calendar_app.dart';
 import 'package:expensemanager/database/expense_database.dart';
 import 'package:expensemanager/expense_manager.dart';
 import 'package:expensemanager/habit_tracker.dart';
+import 'package:expensemanager/notes_app.dart';
 import 'package:expensemanager/todo_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -202,7 +203,7 @@ class MainMenu extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => TodoList()),
+                  MaterialPageRoute(builder: (context) => NotesApp()),
                 );
               },
               style: ElevatedButton.styleFrom(
