@@ -632,13 +632,13 @@
       "languageVersion": "2.19"
     },
     {
-      "name": "expensemanager",
+      "name": "All_In_One_Personal_App",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-06-20T17:11:36.929394Z",
+  "generated": "2024-07-08T06:39:47.464915Z",
   "generator": "pub",
   "generatorVersion": "3.4.3",
   "flutterRoot": "file:///C:/src/flutter",

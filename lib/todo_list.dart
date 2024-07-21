@@ -1,5 +1,5 @@
+import 'package:All_In_One_Personal_App/pages/todo_homepage.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:expensemanager/pages/todo_homepage.dart';
 import 'package:flutter/material.dart';
 
 /// Entry point

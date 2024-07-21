@@ -1,4 +1,4 @@
-# expensemanager
+# All In One Personal App
 
 A new Flutter project.
 

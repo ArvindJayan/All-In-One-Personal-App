@@ -1,4 +1,4 @@
-import 'package:expensemanager/models/expense.dart';
+import 'package:All_In_One_Personal_App/models/expense.dart';
 import 'package:flutter/material.dart';
 import 'package:isar/isar.dart';
 import 'package:path_provider/path_provider.dart';

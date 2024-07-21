@@ -1,10 +1,10 @@
+import 'package:All_In_One_Personal_App/calendar_app.dart';
+import 'package:All_In_One_Personal_App/database/expense_database.dart';
+import 'package:All_In_One_Personal_App/expense_manager.dart';
+import 'package:All_In_One_Personal_App/habit_tracker.dart';
+import 'package:All_In_One_Personal_App/notes_app.dart';
+import 'package:All_In_One_Personal_App/todo_list.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:expensemanager/calendar_app.dart';
-import 'package:expensemanager/database/expense_database.dart';
-import 'package:expensemanager/expense_manager.dart';
-import 'package:expensemanager/habit_tracker.dart';
-import 'package:expensemanager/notes_app.dart';
-import 'package:expensemanager/todo_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

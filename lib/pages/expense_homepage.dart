@@ -1,8 +1,8 @@
-import 'package:expensemanager/bar%20graph/bar_graph.dart';
-import 'package:expensemanager/components/expense_tile.dart';
-import 'package:expensemanager/database/expense_database.dart';
-import 'package:expensemanager/helper/helper_functions.dart';
-import 'package:expensemanager/models/expense.dart';
+import 'package:All_In_One_Personal_App/bar%20graph/bar_graph.dart';
+import 'package:All_In_One_Personal_App/components/expense_tile.dart';
+import 'package:All_In_One_Personal_App/database/expense_database.dart';
+import 'package:All_In_One_Personal_App/helper/helper_functions.dart';
+import 'package:All_In_One_Personal_App/models/expense.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
