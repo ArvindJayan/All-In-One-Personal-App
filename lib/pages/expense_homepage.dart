@@ -7,14 +7,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 // Home page widget displaying expense data and actions
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class ExpenseHomePage extends StatefulWidget {
+  const ExpenseHomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<ExpenseHomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<ExpenseHomePage> {
   TextEditingController nameController = TextEditingController();
   TextEditingController amountController = TextEditingController();
 

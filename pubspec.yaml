@@ -33,6 +33,7 @@ dependencies:
   animated_text_kit: ^4.2.1
   sqflite: ^2.0.0+3
   shared_preferences: ^2.0.8
+  table_calendar: ^3.1.2
 
 
   # The following adds the Cupertino Icons font to your application.

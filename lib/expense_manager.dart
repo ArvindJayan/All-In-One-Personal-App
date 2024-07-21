@@ -34,7 +34,7 @@ class _ExpenseManagerState extends State<ExpenseManager>
       Future.delayed(const Duration(seconds: 1), () {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => const HomePage()),
+          MaterialPageRoute(builder: (context) => const ExpenseHomePage()),
         );
       });
     });

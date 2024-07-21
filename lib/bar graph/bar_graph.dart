@@ -30,7 +30,11 @@ class _MyBarGraphState extends State<MyBarGraph> {
   void initializeBarData() {
     barData = List.generate(
       widget.monthlySummary.length,
-      (index) => IndividualBar(x: index, y: widget.monthlySummary[index]),
+      (index) {
+        // Calculate month offset based on start month and index
+        int monthOffset = (index + widget.startMonth - 1) % 12;
+        return IndividualBar(x: monthOffset, y: widget.monthlySummary[index]);
+      },
     );
   }
 
@@ -38,7 +42,7 @@ class _MyBarGraphState extends State<MyBarGraph> {
   double calculateMax() {
     double max = 10000;
     widget.monthlySummary.sort();
-    max = widget.monthlySummary.last *= 1.3;
+    max = widget.monthlySummary.last * 1.3;
 
     if (max < 5000) {
       return 5000;
@@ -79,7 +83,7 @@ class _MyBarGraphState extends State<MyBarGraph> {
               maxY: calculateMax(),
               gridData: const FlGridData(show: false),
               borderData: FlBorderData(show: false),
-              titlesData: const FlTitlesData(
+              titlesData: FlTitlesData(
                 show: true,
                 topTitles:
                     AxisTitles(sideTitles: SideTitles(showTitles: false)),
@@ -90,8 +94,10 @@ class _MyBarGraphState extends State<MyBarGraph> {
                 bottomTitles: AxisTitles(
                   sideTitles: SideTitles(
                     showTitles: true,
-                    getTitlesWidget: getBottomTitles,
-                    reservedSize: 24,
+                    getTitlesWidget: (value, meta) {
+                      return getBottomTitles(value, meta, widget.startMonth);
+                    },
+                    reservedSize: 40,
                   ),
                 ),
               ),
@@ -126,54 +132,20 @@ class _MyBarGraphState extends State<MyBarGraph> {
 }
 
 // Widget for displaying the month labels on the X-axis of the bar chart
-Widget getBottomTitles(double value, TitleMeta meta) {
+Widget getBottomTitles(double value, TitleMeta meta, int startMonth) {
   const textstyle = TextStyle(
     color: Colors.grey,
     fontWeight: FontWeight.bold,
     fontSize: 14,
   );
+
+  int index = value.toInt();
   String text;
-  switch (value.toInt() % 12) {
-    case 0:
-      text = 'JAN';
-      break;
-    case 1:
-      text = 'FEB';
-      break;
-    case 2:
-      text = 'MAR';
-      break;
-    case 3:
-      text = 'APR';
-      break;
-    case 4:
-      text = 'MAY';
-      break;
-    case 5:
-      text = 'JUN';
-      break;
-    case 6:
-      text = 'JUL';
-      break;
-    case 7:
-      text = 'AUG';
-      break;
-    case 8:
-      text = 'SEP';
-      break;
-    case 9:
-      text = 'OCT';
-      break;
-    case 10:
-      text = 'NOV';
-      break;
-    case 11:
-      text = 'DEC';
-      break;
-    default:
-      text = '';
-      break;
-  }
+
+  // Adjust for starting month offset
+  int monthOffset = (index + startMonth - 1) % 12;
+  text = months[monthOffset];
+
   return SideTitleWidget(
     axisSide: meta.axisSide,
     child: Text(
@@ -182,3 +154,18 @@ Widget getBottomTitles(double value, TitleMeta meta) {
     ),
   );
 }
+
+const List<String> months = [
+  'JAN',
+  'FEB',
+  'MAR',
+  'APR',
+  'MAY',
+  'JUN',
+  'JUL',
+  'AUG',
+  'SEP',
+  'OCT',
+  'NOV',
+  'DEC',
+];
