@@ -1,4 +1,4 @@
-import 'package:All_In_One_Personal_App/models/individual_bar.dart';
+import 'package:all_in_one_personal_app/models/individual_bar.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -110,7 +110,7 @@ class _MyBarGraphState extends State<MyBarGraph> {
                           toY: data.y,
                           width: barWidth,
                           borderRadius: BorderRadius.circular(4),
-                          color: Colors.grey.shade800,
+                          color: Color.fromARGB(255, 217, 17, 17),
                           backDrawRodData: BackgroundBarChartRodData(
                             show: true,
                             toY: calculateMax(),
