@@ -1,9 +1,8 @@
-import 'package:All_In_One_Personal_App/calendar_app.dart';
-import 'package:All_In_One_Personal_App/database/expense_database.dart';
-import 'package:All_In_One_Personal_App/expense_manager.dart';
-import 'package:All_In_One_Personal_App/habit_tracker.dart';
-import 'package:All_In_One_Personal_App/notes_app.dart';
-import 'package:All_In_One_Personal_App/todo_list.dart';
+import 'package:all_in_one_personal_app/calendar_app.dart';
+import 'package:all_in_one_personal_app/database/expense_database.dart';
+import 'package:all_in_one_personal_app/expense_manager.dart';
+import 'package:all_in_one_personal_app/notes_app.dart';
+import 'package:all_in_one_personal_app/todo_list.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -19,14 +18,14 @@ void main() async {
   runApp(
     ChangeNotifierProvider(
       create: (context) => ExpenseDatabase(),
-      child: const MyApp(),
+      child: const MainApp(),
     ),
   );
 }
 
 // Main application widget
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MainApp extends StatelessWidget {
+  const MainApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -62,13 +61,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor: Color.fromARGB(255, 233, 217, 246),
       body: Center(
         child: DefaultTextStyle(
           style: const TextStyle(
             fontSize: 30.0,
             fontWeight: FontWeight.bold,
-            color: Colors.black,
+            color: Color.fromARGB(255, 107, 0, 195),
           ),
           child: AnimatedTextKit(
             animatedTexts: [
@@ -90,13 +89,13 @@ class MainMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 43, 43, 43),
+        backgroundColor: Color.fromARGB(223, 105, 10, 206),
         title: const Text(
           'All In One Personal App',
           style: TextStyle(color: Colors.white),
         ),
       ),
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor: Color.fromARGB(255, 246, 242, 253),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -107,7 +106,7 @@ class MainMenu extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CalendarApp()),
+                  MaterialPageRoute(builder: (context) => const CalendarApp()),
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -117,7 +116,7 @@ class MainMenu extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 backgroundColor: Colors.white,
-                foregroundColor: Colors.black,
+                foregroundColor: const Color.fromARGB(255, 111, 0, 202),
               ),
               icon: const Icon(
                 Icons.calendar_today,
@@ -141,37 +140,13 @@ class MainMenu extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 backgroundColor: Colors.white,
-                foregroundColor: Colors.black,
+                foregroundColor: const Color.fromARGB(255, 111, 0, 202),
               ),
               icon: const Text(
                 '₹',
                 style: TextStyle(fontSize: 24),
               ),
               label: const Text('Expense Manager'),
-            ),
-            const SizedBox(height: 20),
-            // Habit Tracker button
-            ElevatedButton.icon(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HabitTracker()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                backgroundColor: Colors.white,
-                foregroundColor: Colors.black,
-              ),
-              icon: const Icon(
-                Icons.favorite,
-                size: 28,
-              ),
-              label: const Text('Habit Tracker'),
             ),
             const SizedBox(height: 20),
             // To-Do List button
@@ -189,7 +164,7 @@ class MainMenu extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 backgroundColor: Colors.white,
-                foregroundColor: Colors.black,
+                foregroundColor: const Color.fromARGB(255, 111, 0, 202),
               ),
               icon: const Icon(
                 Icons.check_box,
@@ -203,7 +178,7 @@ class MainMenu extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => NotesApp()),
+                  MaterialPageRoute(builder: (context) => const NotesApp()),
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -213,7 +188,7 @@ class MainMenu extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                 backgroundColor: Colors.white,
-                foregroundColor: Colors.black,
+                foregroundColor: const Color.fromARGB(255, 111, 0, 202),
               ),
               icon: const Icon(
                 Icons.notes,
