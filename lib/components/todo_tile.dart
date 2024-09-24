@@ -35,7 +35,9 @@ class TodoTile extends StatelessWidget {
         /// Checkbox color based on completion status.
         fillColor: MaterialStateProperty.resolveWith<Color?>(
           (Set<MaterialState> states) {
-            return taskCompleted ? Colors.grey.shade900 : Colors.white;
+            return taskCompleted
+                ? Color.fromARGB(255, 255, 119, 0)
+                : Colors.white;
           },
         ),
 
