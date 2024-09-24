@@ -42,7 +42,7 @@ class ExpenseTile extends StatelessWidget {
         ),
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.grey.shade200,
+            color: Color.fromARGB(255, 254, 226, 226),
             borderRadius: BorderRadius.circular(8),
           ),
           child: ListTile(
